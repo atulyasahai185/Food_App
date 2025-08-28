@@ -4,12 +4,13 @@ import { API } from "../Utils/URL";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
-  // const ResObj = resObj;
+  //Use State hook, Local state variable
   const [resList, setResList] = useState([]);
   const [filteredRestaurant, setFilteredRest] = useState([]);
 
   const [searchText, setSearchText] = useState("");
 
+  //Use Effect hook
   useEffect(() => {
     fetchData();
   }, []);
