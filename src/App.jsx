@@ -1,6 +1,6 @@
 import "./index.css";
 import Header from "./Components/Header";
-import Body from "./Components/Body";
+// import Body from "./Components/Body";
 import { Outlet } from "react-router-dom";
 
 const App = () => {

@@ -2,6 +2,7 @@ import Res_Card from "./Res_Card";
 import { useEffect, useState } from "react";
 import { API } from "../Utils/URL";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   //Use State hook, Local state variable
@@ -82,7 +83,13 @@ const Body = () => {
       </div>
       <div className="rest-container flex flex-wrap">
         {filteredRestaurant.map((restaurant) => (
-          <Res_Card key={restaurant.info.id} resData={restaurant} />
+          <Link
+            to={"/restaurant/" + restaurant.info.id}
+            key={restaurant.info.id}
+          >
+            {" "}
+            <Res_Card resData={restaurant} />
+          </Link>
         ))}
       </div>
     </div>

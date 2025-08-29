@@ -6,3 +6,6 @@ export const Logo_CDN =
 
 export const API =
   "https://corsproxy.io/https://www.swiggy.com/dapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=28.6309324&lng=77.2742782&carousel=true&third_party_vendor=1";
+
+export const MenuAPI =
+  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.6309324&lng=77.2742782&restaurantId=";

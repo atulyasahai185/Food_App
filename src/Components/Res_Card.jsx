@@ -5,11 +5,11 @@ const Res_Card = ({ resData }) => {
   const { cloudinaryImageId, name, cuisines, locality, avgRating, costForTwo } =
     info;
   return (
-    <div className="res-card w-60 border border-black  m-2 bg-gray-200 hover:border-2 hover:cursor-pointer">
+    <div className="res-card w-60 h-110 border border-black  m-2 bg-gray-200 hover:border-2 hover:cursor-pointer">
       <img
         src={CDN_Link + cloudinaryImageId}
         alt="food-img"
-        className="w-50 ml-4 mt-2"
+        className="w-50 h-60 ml-4 mt-2"
       />
       <div className="text ml-5 mt-4">
         <h3 className="font-bold">{name}</h3>

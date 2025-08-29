@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Logo_CDN } from "../Utils/URL";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   let btn = "login";
@@ -13,10 +14,18 @@ const Header = () => {
       </div>
       <div className="nav-items ">
         <ul className="flex mt-7 text-2xl">
-          <li className="p-2.5 m-2.5 ">Home</li>
-          <li className="p-2.5 m-2.5">About Us</li>
-          <li className="p-2.5 m-2.5">Contact Us</li>
-          <li className="p-2.5 m-2.5">Cart</li>
+          <Link to="/" className="p-2.5 m-2.5 ">
+            Home
+          </Link>
+          <Link to="/about" className="p-2.5 m-2.5">
+            About Us
+          </Link>
+          <Link to="/contact" className="p-2.5 m-2.5">
+            Contact Us
+          </Link>
+          <Link to="/cart" className="p-2.5 m-2.5">
+            Cart
+          </Link>
           <button
             className="bg-gray-400 w-20 h-10 rounded-sm m-4 p-1 text-xl border cursor-pointer"
             onClick={() => {
