@@ -9,3 +9,5 @@ export const API =
 
 export const MenuAPI =
   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.6309324&lng=77.2742782&restaurantId=";
+
+export const UserAPI = "https://api.github.com/users/atulyasahai185";

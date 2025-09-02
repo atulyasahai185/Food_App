@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { API } from "../Utils/URL";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../Utils/useOnlineStatus";
 
 const Body = () => {
   //Use State hook, Local state variable
@@ -39,6 +40,15 @@ const Body = () => {
     );
   };
 
+  const onlineStatus = useOnlineStatus();
+
+  if (onlineStatus === false) {
+    return (
+      (<h1 className="font-bold text-3xl  mt-10">Offline</h1>),
+      (<h2 className="text-xl text-gray-300">We will be back shortly</h2>)
+    );
+  }
+
   if (resList.length === 0) {
     return <Shimmer />;
   }
@@ -68,7 +78,6 @@ const Body = () => {
             Search
           </button>
         </div>
-
         <button
           className="bg-blue-500 font-bold border-2 rounded-md mt-4.5 p-1  h-10 cursor-pointer"
           onClick={() => {
