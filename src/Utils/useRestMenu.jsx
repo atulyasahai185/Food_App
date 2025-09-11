@@ -12,6 +12,8 @@ const useRestMenu = (id) => {
     const data = await fetch(MenuAPI + id);
     const res = await data.json();
 
+    console.log(res);
+
     setMenuInfo(res.data);
   };
 

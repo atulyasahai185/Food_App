@@ -11,3 +11,6 @@ export const MenuAPI =
   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.6309324&lng=77.2742782&restaurantId=";
 
 export const UserAPI = "https://api.github.com/users/atulyasahai185";
+
+export const imageAPI =
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/";

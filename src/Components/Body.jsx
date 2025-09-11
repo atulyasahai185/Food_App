@@ -55,19 +55,19 @@ const Body = () => {
 
   return (
     <div className="Main">
-      <div className="filter flex">
-        <div className="m-3 ">
+      <div className="flex">
+        <div className="m-3 p-3 ">
           <input
             type="text"
             placeholder="Enter something"
             value={searchText}
-            className="w-40 border-2 border-black rounded-sm p-1"
+            className="w-40 border-2 border-black rounded-md p-1 outline-none"
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
           <button
-            className="m-2 bg-gray-500 p-1 border-2 font-bold cursor-pointer rounded-md"
+            className=" bg-gray-400 mx-2 p-1 w-20 border-2 font-bold cursor-pointer rounded-md"
             onClick={() => {
               const filteredRest = resList.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -78,38 +78,35 @@ const Body = () => {
             Search
           </button>
         </div>
-        <button
-          className="bg-blue-500 font-bold border-2 rounded-md mt-4.5 p-1  h-10 cursor-pointer"
-          onClick={() => {
-            const filteredList = resList.filter(
-              (res) => res.info.avgRating > 4
-            );
-            setResList(filteredList);
-          }}
-        >
-          Top Rated Restaurant
-        </button>
-      </div>
-      <div className="rest-container flex flex-wrap">
-        {filteredRestaurant.map((restaurant) => (
-          <Link
-            to={"/restaurant/" + restaurant.info.id}
-            key={restaurant.info.id}
+        <div className="m-3 p-3 flex items-center">
+          <button
+            className="bg-slate-300 font-bold border-2 rounded-md p-1 h-10 cursor-pointer"
+            onClick={() => {
+              const filteredList = resList.filter(
+                (res) => res.info.avgRating > 4
+              );
+              setResList(filteredList);
+            }}
           >
-            {" "}
-            <Res_Card resData={restaurant} />
-          </Link>
-        ))}
+            Top Rated Restaurant
+          </button>
+        </div>
+      </div>
+      <div className="rest-container flex">
+        <div className="flex flex-wrap mx-8 gap-10 overflow-hidden">
+          {filteredRestaurant.map((restaurant) => (
+            <Link
+              to={"/restaurant/" + restaurant.info.id}
+              key={restaurant.info.id}
+            >
+              {" "}
+              <Res_Card resData={restaurant} />
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
 export default Body;
-
-//react fiber
-//virtual dom and actual dom
-//reconcillation algorithm
-//Monolith
-//microservices
-//
