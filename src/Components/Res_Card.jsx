@@ -2,6 +2,8 @@ import { CDN_Link } from "../Utils/URL";
 
 const Res_Card = ({ resData }) => {
   const { info } = resData;
+  console.log(info);
+
   const { cloudinaryImageId, name, cuisines, locality, avgRating } = info;
   return (
     <div className="w-80 h-100 rounded-lg shadow-2xl bg-gray-200 hover:cursor-pointer">

@@ -49,25 +49,25 @@ const Body = () => {
     );
   }
 
-  if (resList.length === 0) {
+  if (!resList || resList.length === 0) {
     return <Shimmer />;
   }
 
   return (
     <div className="Main">
-      <div className="flex">
-        <div className="m-3 p-3 ">
+      <div className="flex justify-between">
+        <div className="mx-6 my-3 p-3 ">
           <input
             type="text"
             placeholder="Enter something"
             value={searchText}
-            className="w-40 border-2 border-black rounded-md p-1 outline-none"
+            className="w-56 border-2 border-black rounded-md p-1 outline-none font-btn"
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
           <button
-            className=" bg-gray-400 mx-2 p-1 w-20 border-2 font-bold cursor-pointer rounded-md"
+            className=" bg-gray-400 mx-2 p-1 w-20 border-2 font-bold cursor-pointer rounded-md font-btn "
             onClick={() => {
               const filteredRest = resList.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -78,14 +78,14 @@ const Body = () => {
             Search
           </button>
         </div>
-        <div className="m-3 p-3 flex items-center">
+        <div className=" my-6 mx-10 ">
           <button
-            className="bg-slate-300 font-bold border-2 rounded-md p-1 h-10 cursor-pointer"
+            className="bg-slate-300 font-bold border-2 rounded-md p-1 cursor-pointer font-btn"
             onClick={() => {
               const filteredList = resList.filter(
                 (res) => res.info.avgRating > 4
               );
-              setResList(filteredList);
+              setFilteredRest(filteredList);
             }}
           >
             Top Rated Restaurant

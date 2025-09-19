@@ -1,8 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { imageAPI } from "../../Utils/URL";
 import { removeItem } from "../Details/CartSlice";
-// import Body from "../Body";
-// import ItemList from "../Details/ItemList";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {

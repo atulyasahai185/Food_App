@@ -2,11 +2,9 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import About from "./Components/Pages/About.jsx";
-import Contact from "./Components/Pages/Contact.jsx";
 import Error from "./Components/Error handle/Error.jsx";
 import Body from "./Components/Body.jsx";
 import Menu from "./Components/Pages/Menu.jsx";
-// import Grocery from "./Components/Pages/Grocery.jsx";
 import { lazy, Suspense } from "react";
 import Cart from "./Components/Pages/Cart.jsx";
 
@@ -21,14 +19,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Body />,
       },
+
       {
         path: "/about",
         element: <About />,
-      },
-
-      {
-        path: "/contact",
-        element: <Contact />,
       },
 
       {

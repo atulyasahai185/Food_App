@@ -23,33 +23,33 @@ const Header = () => {
         />
       </div>
       <div className="flex items-centre ">
-        <ul className="flex m-4 p-1 text-2xl">
-          <Link to="/" className="p-2.5  hover:cursor-pointer font-headers ">
+        <ul className="flex m-4 p-1 text-xl">
+          <Link
+            to="/"
+            className="p-2.5  hover:cursor-pointer font-headers font-semibold"
+          >
             Home
           </Link>
           <Link
             to="/about"
-            className="p-2.5 hover:cursor-pointer font-headers "
+            className="p-2.5 hover:cursor-pointer font-headers font-semibold "
           >
             About Us
           </Link>
           <Link
-            to="/contact"
-            className="p-2.5 hover:cursor-pointer font-headers"
-          >
-            Contact Us
-          </Link>
-          <Link
             to="/grocery"
-            className="p-2.5 hover:cursor-pointer font-headers"
+            className="p-2.5 hover:cursor-pointer font-headers font-semibold"
           >
             Grocery
           </Link>
-          <Link to="/cart" className="p-2.5 hover:cursor-pointer font-headers">
+          <Link
+            to="/cart"
+            className="p-2.5 hover:cursor-pointer font-headers font-semibold"
+          >
             Cart ({cartItem.length} items)
           </Link>
           <button
-            className="bg-gray-300 w-20 h-10 rounded-lg m-2 p-1 text-xl border hover:cursor-pointer font-headers"
+            className="bg-gray-300 w-20 h-10 rounded-lg m-2 p-1 text-xl border hover:cursor-pointer font-headers font-semibold"
             onClick={() => {
               btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
             }}
